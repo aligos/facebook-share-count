@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Facebook Share Count
- * Plugin URI: http://aligos.js.org/wp-plugins/facebook-share-count/
- * Description: Facebook Share Count (FBShareCount) is plugin for check how viral your posts or pages on Facebook.
+ * Plugin Name: FB Share Count
+ * Plugin URI: http://aligos.js.org/wp-plugins/fbsharecount/
+ * Description: FB Share Count (FBShareCount) is plugin for check how viral your posts or pages on Facebook.
  * Version: 1.0.0
  * Tested up to: 4.8.1
  * Author: Rahmat Aligos
@@ -48,7 +48,7 @@ if ( ! class_exists( 'FBShareCount' ) ) {
 			?>
 			<div class="misc-pub-section curshares misc-pub-curshares">
 				<span id="timesshared">
-					<img src="https://www.shareicon.net/data/256x256/2015/09/10/98764_facebook_512x512.png" style="height: 1em;vertical-align: middle;"/> <?php _e( 'shares' ); ?>: <b><?php echo $this->fbscount( $_GET['post'] ); ?></b>
+					<img src="<?php echo esc_url( plugins_url( '/assets/images/fbsharecount_icon.png', __FILE__ ) ); ?>" style="height: 1em;vertical-align: middle;"/> <?php _e( 'shares' ); ?>: <b><?php echo $this->fbscount( $_GET['post'] ); ?></b>
 				</span>
 			</div>
 			<?php
@@ -63,7 +63,7 @@ if ( ! class_exists( 'FBShareCount' ) ) {
 				if ( ! $post_type_object->publicly_queryable ) return;
 			}
 
-		    $defaults['fb_shares'] = '<img src="https://www.shareicon.net/data/256x256/2015/09/10/98764_facebook_512x512.png" style="height: 1em;vertical-align: middle;"/> shares';
+		    $defaults['fb_shares'] = '<img src="' . esc_url( plugins_url( '/assets/images/fbsharecount_icon.png', __FILE__ ) ) . '" style="height: 1em;vertical-align: middle;"> shares';
 		    return $defaults;
 		}
 

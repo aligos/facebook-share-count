@@ -1,4 +1,4 @@
-=== Facebook Share Count ===
+=== FB Share Count ===
 Contributors: Rahmat Aligos
 Tags: Facebook, Share Count,
 Requires at least: 2.5.0
